@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>basicflex | simple flexbox rules</title>
+
+	<link rel="stylesheet" media="screen" href="style.css">
+	<link rel="stylesheet" media="screen" href="flexgrid.css">
+	<link rel="stylesheet" media="screen" href="basicflex.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Andrew Slaughter">
+	<meta name="description" content="This method uses really simple CSS and several media querries to scale the size of the images precisely.">
+	<meta name="robots" content="all">
+
+	<script src="https://use.typekit.net/lxk5mws.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <!--[if IE]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="script/html5shiv.js"></script>
+	<![endif]-->
+
+	<script src="grained.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">//<![CDATA[
+		
+
+			$(document).ready(function(){
+
+			    // $('html').animate({scrollTop:600}, 1);
+
+	});
+
+	</script>
+
+</head>
+
+<body class="nonhome remove mb4">
+					
+				<div class="flex justify-w-space altpagehead">
+					<div class="plainheader">
+						<h1>basicflex is a set of css rules to handle flexbox</h1>
+						<p>included are the most commonly used rules for responsive web design</p>
+						<p><a href="basicflex.css" target="_blank"><b>view the css</b></a> / <a href="https://codepen.io/turtlepower/pen/GZYpwY" target="_blank"><b>download</b></a> / <a href="https://codepen.io/turtlepower/pen/GZYpwY" target="_blank">codepen</a></p>
+					</div>
+					<div>
+						<h1 class="topright ml2"><a href="/">&#60;home</a></h1>
+						<h1 class="topright ml2"><a href="/">see flexbox grid&#62;</a></h1>
+					</div>
+				</div>
+
+<br><br>
+
+<h1 class="plainheader">Examples:</h1>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.flex</h3>
+			<h3 class="soft">display: flex;</h3>
+		</div>
+		<p>&lt;div class="flex"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.flex-col</h3>
+			<h3 class="soft">flex-direction: column;</h3>
+		</div>
+		<p>&lt;div class="flex flex-col"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex flex-col">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.justify-end</h3>
+			<h3 class="soft">justify-content: flex-end;</h3>
+		</div>
+		<p>&lt;div class="flex justify-end"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex justify-end">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.justify-center</h3>
+			<h3 class="soft">justify-content: center;</h3>
+		</div>
+		<p>&lt;div class="flex justify-center"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex justify-center">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.justify-w-space</h3>
+			<h3 class="soft">justify-content: space-between;</h3>
+		</div>
+		<p>&lt;div class="flex justify-w-space"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex justify-w-space">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.justify-w-space-around</h3>
+			<h3 class="soft">justify-content: space-around;</h3>
+		</div>		<p>&lt;div class="flex justify-w-space-around"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex justify-w-space-around">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.align-center</h3>
+			<h3 class="soft">align-items: center;</h3>
+		</div>
+		<p>&lt;div class="flex align-center"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex align-center">
+		<div class="sq"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.priority-flex-child</h3>
+			<h3 class="soft">flex: 1 0 auto;</h3>
+		</div>
+		<p>&lt;div class="flex"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq priority-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex">
+		<div class="sq priority-flex-child"></div>
+		<div class="sq lt"></div>
+		<div class="sq lter"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.single-flex-child</h3>
+			<h3 class="soft">flex: 1 0 auto;</h3>
+		</div>
+		<p>&lt;div class="flex"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq single-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex">
+		<div class="sq single-flex-child"></div>
+		<div class="sq lt single-flex-child"></div>
+		<div class="sq lter single-flex-child"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.double-flex-child<br>.single-flex-child</h3>
+			<h3 class="soft">flex: 2 0 auto;<br>flex: 1 0 auto;</h3>
+		</div>
+		<p>&lt;div class="flex"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq double-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt single-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter single-flex-child"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex">
+		<div class="sq double-flex-child"></div>
+		<div class="sq lt single-flex-child"></div>
+		<div class="sq lter single-flex-child"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.half-flex-child<br>.flex-wrap</h3>
+			<h3 class="soft">flex: 1 0 50%;<br>flex-wrap: wrap;</h3>
+		</div>
+		<p>&lt;div class="flex flex-wrap"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq half-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt half-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter half-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq half-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt half-flex-child"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter half-flex-child"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex flex-wrap">
+		<div class="sq half-flex-child"></div>
+		<div class="sq lt half-flex-child"></div>
+		<div class="sq lter half-flex-child"></div>
+		<div class="sq half-flex-child"></div>
+		<div class="sq lt half-flex-child"></div>
+		<div class="sq lter half-flex-child"></div>
+	</div>
+</div>
+
+<div class="codetext flex flex-col-mobile-840">
+	<div class="flex flex-col-mobile-600">
+		<div>
+			<h3>.half-flex-child<br>.half-flex-child-mobile<br>.flex-wrap<br>.align-lines-center</h3>
+			<h3 class="soft">flex: 1 0 50%;<br>flex: 0 1 100%;<br>flex-wrap: wrap;<br>align-content: center;</h3>
+		</div>
+		<p>&lt;div class="flex flex-wrap align-lines-center"&gt;<br>
+			&nbsp&nbsp&lt;div class="sq half-flex-child half-flex-child-mobile"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lt half-flex-child half-flex-child-mobile"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq lter half-flex-child half-flex-child-mobile"&gt;&lt;/div&gt;<br>
+			&nbsp&nbsp&lt;div class="sq half-flex-child half-flex-child-mobile"&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;
+		</p>
+	</div>
+	<div class="showbox flex flex-wrap align-lines-center">
+		<div class="sq half-flex-child half-flex-child-mobile"></div>
+		<div class="sq lt half-flex-child half-flex-child-mobile"></div>
+		<div class="sq lter half-flex-child half-flex-child-mobile"></div>
+		<div class="sq half-flex-child half-flex-child-mobile"></div>
+		<div class="sq lt half-flex-child half-flex-child-mobile"></div>
+		<div class="sq lter half-flex-child half-flex-child-mobile"></div>
+	</div>
+</div>
+
+				<div class="flex justify-end altpagehead mt4 mb4">
+					<h1 class="ml2"><a href="/">&#60;home</a> <a href="/">&#94;top</a></h1>
+				</div>
+
+</body>
+</html>
