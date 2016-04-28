@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>simpleflex | simple flexbox rules</title>
 
-	<link rel="stylesheet" media="screen" href="style.css">
+	<link rel="stylesheet" media="screen" href="http://parksi.de/style.css">
 	<link rel="stylesheet" media="screen" href="flexgrid.css">
 	<link rel="stylesheet" media="screen" href="simpleflex.css">
 
@@ -32,9 +32,12 @@
 
 			$(document).ready(function(){
 
-			    // $('html').animate({scrollTop:600}, 1);
+			    $('#topofpage').click(function() {
+					  $("html, body").animate({ scrollTop: 0 }, "slow");
+					  return false;
+					});
 
-	});
+			});
 
 	</script>
 
@@ -46,7 +49,7 @@
 					<div class="plainheader">
 						<h1>simpleflex is a set of css rules to handle flexbox</h1>
 						<p>included are the most commonly used rules for responsive web design</p>
-						<p><a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/gh-pages/simpleflex.css" target="_blank"><b>view the css</b></a> / <a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/gh-pages/simpleflex.css" download="simpleflex.css"><b>download</b></a> / <a href="https://github.com/drewbots/simpleflex.css" target="_blank">github</a></p>
+						<p><a href="https://github.com/drewbots/simpleflex.css" target="_blank"><b>github</b></a> / <a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/gh-pages/simpleflex.css" target="_blank">view the css</a> / <a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/gh-pages/simpleflex.css" download="simpleflex.css">download</a></p>
 					</div>
 					<div>
 						<h1 class="topright ml2"><a href="/">&#60;home</a></h1>
@@ -308,7 +311,7 @@
 </div>
 
 				<div class="flex justify-end altpagehead mt4 mb4">
-					<h1 class="ml2"><a href="/">&#60;home</a> <a href="/">&#94;top</a></h1>
+					<h1 class="ml2"><a href="/">&#60;home</a> <a href="#" id="topofpage">&#94;top</a></h1>
 				</div>
 
 </body>
