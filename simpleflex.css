@@ -35,13 +35,6 @@
 	flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-	.flex-col-mobile {
-		flex-direction: column;
-		-webkit-flex-direction: column;
-	}
-}
-
 /* align-items - use to align the cross axis, example: to vertically align elements in a row */
 
 .align-start {
@@ -132,10 +125,14 @@
 
 .yesshrink {  /* DEFAULT */
 	flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
 }
 
 .noshrink {
 	flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
 }
 
 /* flex - prioritize (or enlarge) the size of a child compared to other children */
@@ -150,6 +147,8 @@
 
 .single-flex-child {
 	flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
 }
 
 .double-flex-child {
@@ -166,12 +165,30 @@
   -ms-flex: 1 0 50%;
 }
 
+
+
+/*===  MOBILE RULES  ===*/
+
 @media (max-width: 768px) {
-  .half-flex-child-mobile {
-    flex: 0 1 100%;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-  }
+	
+	.onecol-flex-mobile {
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+
+	.onecol-flex-mobile-child {
+		flex: 0 1 100%;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+
+	.half-flex-mobile-child {
+		flex: 0 1 50%;
+		-webkit-flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+	}
+
+
 }
 
 
