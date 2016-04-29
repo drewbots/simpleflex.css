@@ -8,145 +8,143 @@
  */
 
 
-/*===  COMMON PARENT CONTAINER PROPERTIES  ===*/
-
-/* display - add flexbox  */
+/*===  PARENT CONTAINER PROPERTIES  ===*/
 
 .flex {
 	display: -ms-flexbox;  /* TWEENER - IE 10 */
 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
 	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
 	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
 }
 
 /* flex-direction - use to specify the main axis or direction of flex, i.e. specifying rows or columns */
 
-.flex-row { /* DEFAULT */
-  flex-direction: row;
-  -webkit-flex-direction: row;
-}
-
 .flex-col {
-  flex-direction: column;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
 }
 
 .flex-wrap {
-	flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* align-items - use to align the cross axis, example: to vertically align elements in a row */
 
 .align-start {
-  align-items: flex-start;
   -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
 }
 
 .align-center {
-  align-items: center;
   -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 .align-end {
-  align-items: flex-end;
   -webkit-align-items: flex-end;
-}
-
-@media (max-width: 768px) {
-	.align-center-mobile {
-  	align-items: center;
-  	-webkit-align-items: center;
-}
+  -ms-flex-align: end;
+  -webkit-box-align: end;
+  align-items: flex-end;
 }
 
 /* justify-content - use to align the main axis, example: to horizontally align elements in a row */
 
 .justify-start {  /* DEFAULT */
-	justify-content: flex-start;
   -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
 }
 
 .justify-center {
-	justify-content: center;
   -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
 
 .justify-end {
-	justify-content: flex-end;
-	-webkit-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
 }
 
-.justify-w-space {
-	justify-content: space-between;
-	-webkit-justify-content: space-between;
+.justify-space {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
 }
 
-.justify-w-space-around {
-	justify-content: space-around;
-	-webkit-justify-content: space-around;
+.justify-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
-/* align-content - align mulitple rows */
+/* align-content - align rows of flexed content in the cross axis */
 
-.align-lines-start {  /* DEFAULT */
-	align-content: flex-start;
+.rows-start {  /* DEFAULT */
+  align-content: flex-start;
   -webkit-align-content: flex-start;
+  -ms-align-content: flex-start;
 }
 
-.align-lines-center {
-	align-content: center;
+.rows-center {
+  align-content: center;
   -webkit-align-content: center;
+  -ms-align-content: center;
 }
 
-.align-lines-end {
-	align-content: flex-end;
-	-webkit-align-content: flex-end;
+.rows-end {
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
+  -ms-align-content: flex-end;
 }
 
-.align-lines-w-space {
-	align-content: space-between;
-	-webkit-align-content: space-between;
+.rows-space {
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-align-content: space-between;
 }
 
-.align-lines-w-space-around {
-	align-content: space-around;
-	-webkit-align-content: space-around;
+.rows-around {
+  align-content: space-around;
+  -webkit-align-content: space-around;
+  -ms-align-content: space-around;
 }
 
-.align-lines-stretch {
-	align-content: stretch;
-	-webkit-align-content: stretch;
+.rows-stretch {
+  align-content: stretch;
+  -webkit-align-content: stretch;
+  -ms-align-content: stretch;
 }
 
 
 /*===  COMMON CHILD CONTAINER RULES  ===*/
 
-/* flex-shrink - determines if div will shrink or hold its size */
+/* flexgrow 1 - prioritize (or enlarge) the size of a child compared to other children */
 
-.yesshrink {  /* DEFAULT */
-	flex-shrink: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-}
 
-.noshrink {
-	flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-}
-
-/* flex - prioritize (or enlarge) the size of a child compared to other children */
-
-.priority-flex-child {
-  flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-}
-
-/* flex - 2x enlarge the size of a child compared to other children */
+/* flexgrow: 2; - 2x enlarge the size of a child compared to other children */
 
 .single-flex-child {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
 }
@@ -157,12 +155,20 @@
   -ms-flex: 2 0 auto;
 }
 
-/* flex - children are 50% wide */
+/* flex-basis - children are 50% wide (default is auto) */
 
 .half-flex-child {
-  flex: 0 1 50%;
-  -webkit-flex: 0 1 50%;
-  -ms-flex: 0 1 50%;
+  flex-basis: 50%;
+  -webkit-flex-basis: 50%;
+  -ms-flex-basis: 50%;
+}
+
+/* flex-shrink: 0; - prevents children from shrinking (default is 1) */
+
+.flex-shrink-no {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
 }
 
 
@@ -170,28 +176,32 @@
 /*===  MOBILE RULES  ===*/
 
 @media (max-width: 768px) {
-	
-	.onecol-flex-mobile {
-		flex-direction: column;
-		-webkit-flex-direction: column;
+
+  .onecol-flex-mobile {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .onecol-flex-mobile-child {
+    flex: 0 1 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
 	}
 
-	.onecol-flex-mobile-child {
-		flex: 0 1 100%;
-		-webkit-flex: 0 1 100%;
-		-ms-flex: 0 1 100%;
-	}
+  .half-flex-mobile-child {
+    flex: 0 1 50%;
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+  }
 
-	.half-flex-mobile-child {
-		flex: 0 1 50%;
-		-webkit-flex: 0 1 50%;
-		-ms-flex: 0 1 50%;
-	}
-
-	.flex-wrap-mobile {
-		flex-wrap: wrap;
-	}
-
+  .flex-wrap-mobile {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 
 }
 
