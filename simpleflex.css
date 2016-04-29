@@ -160,9 +160,9 @@
 /* flex - children are 50% wide */
 
 .half-flex-child {
-  flex: 1 0 50%;
-  -webkit-flex: 1 0 50%;
-  -ms-flex: 1 0 50%;
+  flex: 0 1 50%;
+  -webkit-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
 }
 
 
@@ -178,14 +178,14 @@
 
 	.onecol-flex-mobile-child {
 		flex: 0 1 100%;
-		-webkit-flex: 0 0 100%;
-		-ms-flex: 0 0 100%;
+		-webkit-flex: 0 1 100%;
+		-ms-flex: 0 1 100%;
 	}
 
 	.half-flex-mobile-child {
-		flex: 1 0 50%;
-		-webkit-flex: 1 0 50%;
-		-ms-flex: 1 0 50%;
+		flex: 0 1 50%;
+		-webkit-flex: 0 1 50%;
+		-ms-flex: 0 1 50%;
 	}
 
 	.flex-wrap-mobile {
