@@ -188,6 +188,10 @@
 		-ms-flex: 1 0 50%;
 	}
 
+	.flex-wrap-mobile {
+		flex-wrap: wrap;
+	}
+
 
 }
 
