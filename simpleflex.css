@@ -183,9 +183,9 @@
 	}
 
 	.half-flex-mobile-child {
-		flex: 0 1 50%;
-		-webkit-flex: 0 0 50%;
-		-ms-flex: 0 0 50%;
+		flex: 1 0 50%;
+		-webkit-flex: 1 0 50%;
+		-ms-flex: 1 0 50%;
 	}
 
 
