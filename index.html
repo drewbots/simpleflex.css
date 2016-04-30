@@ -4,10 +4,9 @@
 	<meta charset="utf-8">
 	<title>simpleflex | simple flexbox rules</title>
 
-	
 	<link rel="stylesheet" media="screen" href="flexgrid.css">
 	<link rel="stylesheet" media="screen" href="simpleflex.css">
-  <link rel="stylesheet" media="screen" href="http://parksi.de/style.css">
+	<link rel="stylesheet" media="screen" href="http://parksi.de/style.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Andrew Slaughter">
@@ -17,7 +16,7 @@
 	<script src="https://use.typekit.net/lxk5mws.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-  <!--[if IE]>
+	<!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
 
@@ -30,15 +29,14 @@
 
 	<script type="text/javascript">//<![CDATA[
 		
+		$(document).ready(function(){
 
-			$(document).ready(function(){
-
-			    $('.topofpage').click(function() {
-					  $("html, body").animate({ scrollTop: 0 }, "slow");
-					  return false;
-					});
-
+			$('.topofpage').click(function() {
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+					return false;
 			});
+
+		});
 
 	</script>
 
@@ -46,15 +44,15 @@
 
 <body class="nobackgroundmadness">
 					
-				<div class="flex justify-between altpagehead">
-					<div class="plainheader">
-						<h1>simpleflex is a set of css rules to handle flexbox</h1>
-						<p><a href="https://github.com/drewbots/simpleflex.css" target="_blank"><b>github</b></a> / <a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/master/simpleflex.css" target="_blank">css</a> / <a href="https://github.com/drewbots/simpleflex.css/archive/master.zip" download="simpleflex.css">download</a></p>
-					</div>
-					<div>
-						<h3 class="text-right ml2"><a href="http://drewbots.github.io/simpleflex.css/flexgrid.html">see flexbox grid&#62;</a></h3>
-					</div>
-				</div>
+<div class="flex justify-between altpagehead">
+	<div class="plainheader">
+		<h1>simpleflex is a set of css rules to handle flexbox</h1>
+		<p><a href="https://github.com/drewbots/simpleflex.css" target="_blank"><b>github</b></a> / <a href="https://raw.githubusercontent.com/drewbots/simpleflex.css/master/simpleflex.css" target="_blank">css</a> / <a href="https://github.com/drewbots/simpleflex.css/archive/master.zip" download="simpleflex.css">download</a></p>
+	</div>
+	<div>
+		<h3 class="text-right ml2"><a href="http://drewbots.github.io/simpleflex.css/flexgrid.html">see flexbox grid&#62;</a></h3>
+	</div>
+</div>
 
 <br><br>
 
