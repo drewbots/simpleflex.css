@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 }
 
-.fleximagegrid a {
+.fleximagegrid a {   /*you can always change this to a div */
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
